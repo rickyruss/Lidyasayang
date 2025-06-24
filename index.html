@@ -264,18 +264,33 @@
         margin-top: 10px;
         font-size: 1.5em;
         color: white;">Happy Birthday</h1>
-           <div class="scroll-text">
+           <div class="scroll-text" id="scrollBox" style="height: 200px; overflow-y: auto;">
             <p class="text-center message" style="font-size: 0.9em;
-              text-align: center;color: white;line-height: 1.5;margin-top: 10px; overflow-y: auto;">Selamat ulang tahun, Lidya Zahra Wibowo, cintaku. <br><br>
+              text-align: center; color: white; line-height: 1.5; margin-top: 10px;">
+              Selamat ulang tahun, Lidya Zahra Wibowo, cintaku. <br><br>
               Hari ini adalah hari istimewa karena seseorang yang luar biasa lahir ke dunia – kamu. <br><br>
               Terima kasih sudah hadir dalam hidupku, memberi warna, tawa, dan cinta yang tak ternilai. <br><br>
               Semoga di usiamu yang baru, semua impianmu semakin dekat, hatimu selalu bahagia, dan langkahmu selalu dimudahkan. <br><br>
               Aku berdoa agar kamu selalu sehat, dilindungi Tuhan, dan terus jadi sosok hebat yang aku banggakan. <br><br>
               Aku bersyukur setiap hari karena memilikimu. <br><br>
               Hari ini, biarlah dunia tahu bahwa kamu bukan hanya spesial, tapi kamu segalanya bagiku. <br><br>
-              Aku cinta kamu, Lidya, hari ini, esok, dan selamanya.</p>
-            </div>
+              Aku cinta kamu, Lidya, hari ini, esok, dan selamanya.
+            </p>
+          </div>
         </div>
+        <script>
+          const scrollBox = document.getElementById('scrollBox');
+        
+          function autoScroll() {
+            if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight) {
+              scrollBox.scrollTop = 0; // reset ke atas jika sudah di bawah
+            } else {
+              scrollBox.scrollTop += 1; // scroll 1px tiap interval
+            }
+          }
+        
+          setInterval(autoScroll, 50); // scroll setiap 50 milidetik
+        </script>
         <img style="position:absolute;right:-23px;margin:20px auto;width:45px;transition:1s;" class="tangankiri" src="img/tangankanan.png">
         <img style="position:absolute;left:-23px;margin:60px auto;width:45px;transition:1s;" class="tangankanan" src="img/tangankiri.png">
         <button class="btn text-white prev" data-slidep="slidenol" style="position:absolute;left:5px;bottom:5px;padding:0px 3px 0px 3px;background-color:rgba(0,0,0,.3);width:35px;">&laquo;</button>
